@@ -1,5 +1,5 @@
 sudo npm install -g json
-VERSION_ID=sfdx force:org:open -u "ORG_NAME" --json | json result.url
+VERSION_ID=`sfdx force:org:open -u "ORG_NAME" --json | json result.url`
 echo "$VERSION_ID"
 key=true
 for i in *.js;
