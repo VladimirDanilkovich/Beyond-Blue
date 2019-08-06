@@ -1,3 +1,5 @@
+
+VERSION_ID = "vova"
 if [ "${SFDX_AUTH_URL}" != "" ]
 then
 sudo npm install -global sfdx-cli
@@ -11,10 +13,11 @@ echo "Authenticating..."
 sfdx force:auth:sfdxurl:store -f ${FILE_NAME} -d -a DevHub
 # Removing the file
 rm ${FILE_NAME}
+VERSION_ID=`sfdx force:org:open -u "ORG_NAME" --json | json result.url`
 else
     echo "No SFDX_AUTH_URL variable. The test are run only for public available pages"
 fi
-
+echo "$VERSION_ID"
 key=true
 for i in *.js;
 do
