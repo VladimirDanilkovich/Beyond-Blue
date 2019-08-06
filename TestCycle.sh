@@ -1,5 +1,4 @@
-
-VERSION_ID = "vova"
+VERSION_ID="HI PIdor"
 if [ "${SFDX_AUTH_URL}" != "" ]
 then
 sudo npm install -global sfdx-cli
