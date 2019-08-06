@@ -20,11 +20,7 @@ echo "$VERSION_ID"
 key=true
 for i in *.js;
 do 
-   SFLOGIN="var={}   await driver.get('$VERSION_ID')"
-   echo "$SFLOGIN"
-   sed 's#var={}#$SFLOGIN#g' "$i" > index-updated.js
-   egrep -v index-updated.js | uniq
-   sed 's#Builder().forBrowser('"'"'firefox'"'"')#Builder().usingServer('"'"'http://localhost:4444/wd/hub'"'"').forBrowser('"'"'chrome'"'"')#g' index-updated.js > index-updated.js
+   sed 's#Builder().forBrowser('"'"'firefox'"'"')#Builder().usingServer('"'"'http://localhost:4444/wd/hub'"'"').forBrowser('"'"'chrome'"'"') await driver.get('$VERSION_ID')#g' index-updated.js > index-updated.js
    mocha index-updated.js || key=false 
 done
 if [ "$key" = "false" ]
