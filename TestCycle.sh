@@ -9,8 +9,8 @@ FILE_NAME="sfdx-auth-url.txt"
 echo ${SFDX_AUTH_URL} > ${FILE_NAME}
 # Login
 echo "Authenticating..."
-VERSION_ID=`sfdx force:org:open -u ${FILE_NAME} --json | json result.url`
 sfdx force:auth:sfdxurl:store -f ${FILE_NAME} -d -a DevHub
+VERSION_ID=`sfdx force:org:open -u DevHub --json | json result.url`
 # Removing the file
 rm ${FILE_NAME}
 else
