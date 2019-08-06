@@ -25,7 +25,7 @@ describe('0 Amount Cash (false)', function() {
     await driver.findElement(By.xpath("//td[4]/div/div/div[2]/div/input")).click()
     await driver.findElement(By.xpath("//td[4]/div/div/div[4]/ul/li/span/div/span")).click()
     await driver.findElement(By.xpath("//lightning-input/div/input")).click()
-    await driver.findElement(By.xpath("//lightning-input/div/input")).sendKeys("0")
+    await driver.findElement(By.xpath("//lightning-input/div/input")).sendKeys("60")
     await driver.findElement(By.xpath("//td[7]/div/div/div/select")).click()
     {
       const dropdown = await driver.findElement(By.xpath("//td[7]/div/div/div/select"))
