@@ -47,9 +47,9 @@ jobs:
       - run:
           name: install-mocha
           command: sudo npm install -g mocha
-      - run:
-          name: dev-hub
-          command: . credentials.sh
+      #- run:
+       #   name: dev-hub
+        #  command: . credentials.sh
       - run:
           name: install-web
           command: npm install selenium-webdriver
