@@ -9,10 +9,10 @@ FILE_NAME="sfdx-auth-url.txt"
 echo ${SFDX_AUTH_URL} > ${FILE_NAME}
 # Login
 echo "Authenticating..."
+VERSION_ID=`sfdx force:org:open -u ${FILE_NAME} --json | json result.url`
 sfdx force:auth:sfdxurl:store -f ${FILE_NAME} -d -a DevHub
 # Removing the file
 rm ${FILE_NAME}
-VERSION_ID=`sfdx force:org:open -u "ORG_NAME" --json | json result.url`
 else
     echo "No SFDX_AUTH_URL variable. The test are run only for public available pages"
 fi
