@@ -14,6 +14,8 @@ describe('Valid CC', function() {
     await driver.quit();
   })
   it('Valid CC', async function() {
+    await driver.get("https://beyondblue--dev.my.salesforce.com/secur/frontdoor.jsp?sid=00D0l0000008obj!AR8AQGlZatjhhR0butsEFM8x1HbMlUshRKKjt.yCf5wpgDrpenUfIEd3OAwq6iyt9iRxUoMqxlClOC.SjWZzISZlVnetTq6W")
+    await driver.sleep(5000)
     await driver.get("https://beyondblue--dev.lightning.force.com/lightning/r/Contact/0030l00000UedkOAAR/view?0.source=alohaHeader")
     await driver.findElement(By.linkText("Donate")).click()
     await driver.findElement(By.xpath("//lightning-input/div/input")).click()
