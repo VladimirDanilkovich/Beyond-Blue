@@ -22,7 +22,7 @@ describe('0 Amount Cash (false)', function() {
     await driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[3]/div[1]/div[1]/div[2]/div[1]/input[1]")).sendKeys("mr selen")
     await driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[3]/div[1]/div[1]/div[4]/ul[1]/li[2]/span[1]/div[1]/div[1]")).click()
     {
-      const element = await driver.findElement(By.css("td:nth-child(3) .slds-button .slds-icon"))
+      const element = await driver.findElement(By.xpath("//body[@class='desktop']"))
       await driver.actions({ bridge: true }).moveToElement(element).perform()
     }
     await driver.findElement(By.xpath("//td[4]/div/div/div[2]/div/input")).click()
