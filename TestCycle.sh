@@ -7,7 +7,7 @@ sudo npm install -g slack-cli
 FILE_NAME="sfdx-auth-url.txt"
 # Creation of a temp file that contains Sfdx Auth Url
 echo ${SFDX_AUTH_URL} > ${FILE_NAME}
-# Login
+# Lo
 echo "Authenticating..."
 sfdx force:auth:sfdxurl:store -f ${FILE_NAME} -d -a Org
 Login_Url=`sfdx force:org:open -u Org --json | json result.url`
@@ -20,7 +20,7 @@ echo "$Login_Url"
 key=true
 for i in Amount.js;
 do 
-   sed -i '17iawait driver.get("https://beyondblue--dev.my.salesforce.com/secur/frontdoor.jsp?sid=00D0l0000008obj!AR8AQD.7j9OvRwydfqGwk1u7fDN7ERPJ4Vwn7qdD0mF3HZ3gm36DCprXbHf3NJ3882NgNcKmbx.IaU3BdHK4nSOWq_nKY.tP")' "$i"
+   
    sed 's#Builder().forBrowser('"'"'firefox'"'"')#Builder().usingServer('"'"'http://localhost:4444/wd/hub'"'"').forBrowser('"'"'chrome'"'"')#g' "$i" > index-updated.js
    mocha index-updated.js || key=false 
 done
