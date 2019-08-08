@@ -22,7 +22,7 @@ for i in *.js;
 do 
    
    sed 's#Builder().forBrowser('"'"'firefox'"'"')#Builder().usingServer('"'"'http://localhost:4444/wd/hub'"'"').forBrowser('"'"'chrome'"'"')#g' "$i" > index-updated.js
-   sed -i '17i\await driver.get('$Login_Url')' index-updated.js
+   sed -i '17i\await driver.get("'$Login_Url'")' index-updated.js
    mocha index-updated.js || key=false 
 done
 if [ "$key" = "false" ]
