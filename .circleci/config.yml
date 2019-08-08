@@ -66,12 +66,14 @@ jobs:
 workflows:
   version: 2
   commit:
-    jobs:
-      - bilder
+  - commits:
       filters:
         branches:
           only:
             - selenium
+    jobs:
+      - bilder
+      
   nightly:
     triggers:
       - schedule:
