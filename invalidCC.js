@@ -14,8 +14,10 @@ describe('Invalid CC', function() {
     await driver.quit();
   })
   it('Invalid CC', async function() {
+    
+    await sleep(5000)
     await driver.get("https://beyondblue--dev.lightning.force.com/lightning/r/Contact/0030l00000UedkOAAR/view?0.source=alohaHeader")
-    await driver.findElement(By.linkText("Donate")).click()
+    await driver.findElement(By.xpath("//div[contains(text(),'Donate')]")).click()
     await driver.findElement(By.xpath("//lightning-input/div/input")).click()
     await driver.findElement(By.xpath("//lightning-input/div/input")).sendKeys("3")
     await driver.findElement(By.xpath("//div[2]/div/div/div/div[2]/div/input")).click()
