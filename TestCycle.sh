@@ -16,7 +16,7 @@ rm ${FILE_NAME}
 else
     echo "No SFDX_AUTH_URL variable. The test are run only for public available pages"
 fi
-echo "$Login-Url"
+echo "$Login_Url"
 key=true
 for i in *.js;
 do 
