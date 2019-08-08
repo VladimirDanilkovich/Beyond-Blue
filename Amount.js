@@ -18,8 +18,8 @@ describe('0 Amount Cash (false)', function() {
     await driver.sleep(6000)
     await driver.get("https://beyondblue--dev.lightning.force.com/lightning/n/Bulk_Donations?0.source=alohaHeader")
     await driver.sleep(5000)
-    await driver.findElement(By.xpath("//td[3]/div/div/div/div/input")).click()
-    await driver.findElement(By.xpath("//td[3]/div/div/div/div/input")).sendKeys("mr selen")
+    await driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[3]/div[1]/div[1]/div[2]/div[1]/input[1]")).click()
+    await driver.findElement(By.xpath("/html[1]/body[1]/div[5]/div[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/article[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/table[1]/tbody[1]/tr[1]/td[3]/div[1]/div[1]/div[2]/div[1]/input[1]")).sendKeys("mr selen")
     await driver.findElement(By.css(".slds-lookup__list:nth-child(2) .slds-media")).click()
     {
       const element = await driver.findElement(By.css("td:nth-child(3) .slds-button .slds-icon"))
