@@ -68,6 +68,10 @@ workflows:
   commit:
     jobs:
       - bilder
+      filters:
+        branches:
+          only:
+            - selenium
   nightly:
     triggers:
       - schedule:
