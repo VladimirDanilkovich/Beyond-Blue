@@ -14,7 +14,7 @@ describe('0 Amount Cash (false)', function() {
     await driver.quit();
   })
   it('0 Amount Cash (false)', async function() {
-    
+    await driver.get("https://beyondblue--dev.my.salesforce.com/secur/frontdoor.jsp?sid=00D0l0000008obj!AR8AQD.7j9OvRwydfqGwk1u7fDN7ERPJ4Vwn7qdD0mF3HZ3gm36DCprXbHf3NJ3882NgNcKmbx.IaU3BdHK4nSOWq_nKY.tP")
     await driver.sleep(6000)
     await driver.get("https://beyondblue--dev.lightning.force.com/lightning/n/Bulk_Donations?0.source=alohaHeader")
     await driver.sleep(5000)
