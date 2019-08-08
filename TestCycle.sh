@@ -1,4 +1,4 @@
-VERSION_ID="HI PIdor"
+Login_Url="HI PIdor"
 if [ "${SFDX_AUTH_URL}" != "" ]
 then
 sudo npm install -global sfdx-cli
@@ -9,14 +9,14 @@ FILE_NAME="sfdx-auth-url.txt"
 echo ${SFDX_AUTH_URL} > ${FILE_NAME}
 # Login
 echo "Authenticating..."
-sfdx force:auth:sfdxurl:store -f ${FILE_NAME} -d -a DevHub
-VERSION_ID=`sfdx force:org:open -u DevHub --json | json result.url`
+sfdx force:auth:sfdxurl:store -f ${FILE_NAME} -d -a Org
+Login_Url=`sfdx force:org:open -u Org --json | json result.url`
 # Removing the file
 rm ${FILE_NAME}
 else
     echo "No SFDX_AUTH_URL variable. The test are run only for public available pages"
 fi
-echo "$VERSION_ID"
+echo "$Login-Url"
 key=true
 for i in *.js;
 do 
