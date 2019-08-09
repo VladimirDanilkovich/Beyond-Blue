@@ -17,6 +17,7 @@ describe('Valid CC', function() {
 
     await driver.sleep(5000)
     await driver.get("https://beyondblue--dev.lightning.force.com/lightning/r/Contact/0030l00000UedkOAAR/view?0.source=alohaHeader")
+    await driver.sleep(3000)
     await driver.findElement(By.linkText("Donate")).click()
     await driver.findElement(By.xpath("//lightning-input/div/input")).click()
     await driver.findElement(By.xpath("//lightning-input/div/input")).sendKeys("3")
