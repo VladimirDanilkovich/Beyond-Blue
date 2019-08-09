@@ -31,9 +31,9 @@ describe('Cheque', function() {
     }
   
     await driver.sleep(4000)
-/*    await driver.findElement(By.xpath("//input[@id='input-279']")).click()
+    await driver.findElement(By.xpath("//td[3]/lightning-input/div/input")).click()
     await driver.findElement(By.css("tr:nth-child(2) > td:nth-child(3) > .slds-day")).click()
-    await driver.findElement(By.xpath("//td[3]/lightning-input/div/input")).click()*/
+    await driver.findElement(By.xpath("//td[3]/lightning-input/div/input")).click()
     await driver.findElement(By.xpath("//td[3]/lightning-input/div/input")).sendKeys("128492948503")
     await driver.findElement(By.xpath("//td[4]/lightning-input/div/input")).sendKeys("ddd")
     await driver.findElement(By.xpath("//button[contains(.,\'Save\')]")).click()
