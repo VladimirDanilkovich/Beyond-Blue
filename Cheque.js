@@ -29,8 +29,8 @@ describe('Cheque', function() {
       const dropdown = await driver.findElement(By.xpath("//td[7]/div/div/div/select"))
       await dropdown.findElement(By.css("*:nth-child(2)")).click()
     }
-    await driver.findElement(By.css(".slds-scrollable_y")).click()
-    await driver.sleep(3000)
+  
+    await driver.sleep(4000)
     await driver.findElement(By.xpath("//td[2]/lightning-input/lightning-datepicker/div/div/input")).click()
     await driver.findElement(By.css("tr:nth-child(2) > td:nth-child(3) > .slds-day")).click()
     await driver.findElement(By.xpath("//td[3]/lightning-input/div/input")).click()
