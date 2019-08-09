@@ -1,4 +1,4 @@
-Login_Url="HI PIdor"
+Login_Url=""
 if [ "${SFDX_AUTH_URL}" != "" ]
 then
 sudo npm install -global sfdx-cli
