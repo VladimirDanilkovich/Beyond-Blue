@@ -22,6 +22,7 @@ describe('Invalid CC', function() {
     await driver.sleep(2000)
     await driver.findElement(By.xpath("//lightning-input/div/input")).click()
     await driver.findElement(By.xpath("//lightning-input/div/input")).sendKeys("3")
+    await driver.sleep(2000)
     await driver.findElement(By.xpath("//div[2]/div/div/div/div[2]/div/input")).click()
     await driver.findElement(By.css("li:nth-child(1) .slds-media__body:nth-child(2) > .slds-lookup__result-text")).click()
     await driver.findElement(By.xpath("//div[4]/div[2]/div/lightning-input/div/input")).click()
