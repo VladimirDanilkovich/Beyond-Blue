@@ -31,6 +31,6 @@ describe('0 Amount Cash (false)', function() {
     }
     await driver.findElement(By.css(".slds-button_brand")).click()
     await driver.findElement(By.xpath("//button[contains(.,\'Save\')]")).click()
-    await driver.wait(until.elementLocated(By.css(".slds-theme--error")), 12000)
+    await driver.wait(until.elementLocated(By.css(".slds-theme--error")), 15000)
   })
 })
