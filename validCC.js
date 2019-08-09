@@ -16,7 +16,7 @@ describe('Valid CC', function() {
   it('Valid CC', async function() {
 
     await driver.sleep(8000)
-    await driver.get("https://beyondblue--dev.lightning.force.com/lightning/r/Contact/0030l00000UedkOAAR/view?0.source=alohaHeader")
+    await driver.get("https://beyondblue--dev.lightning.force.com/lightning/n/Bulk_Donations?0.source=alohaHeader")
     await driver.sleep(8000)
     await driver.findElement(By.linkText("Donate")).click()
      await driver.sleep(2000)
