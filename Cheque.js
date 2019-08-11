@@ -25,10 +25,9 @@ describe('Cheque', function() {
     await driver.findElement(By.xpath("//lightning-input/div/input")).click()
     await driver.findElement(By.xpath("//lightning-input/div/input")).sendKeys("20")
     await driver.findElement(By.xpath("//td[7]/div/div/div/select")).click()
-    await driver.findElement(By.xpath("//td[7]/div/div/div/select")).select("index=2")
     {
       const dropdown = await driver.findElement(By.xpath("//td[7]/div/div/div/select"))
-      await dropdown.findElement(By.css("*:nth-child(2)")).click()
+      await dropdown.findElement(By.css("*[value='Cheque']")).click()
     }
   
     await driver.sleep(4000)
