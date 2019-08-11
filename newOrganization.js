@@ -15,17 +15,17 @@ describe('New Organization', function() {
   })
   it('New Organization', async function() {
     await driver.get("https://beyondblue--dev.lightning.force.com/lightning/n/Bulk_Donations?0.source=alohaHeader")
+    await driver.sleep(3000)
     await driver.findElement(By.xpath("//select")).click()
     {
       const dropdown = await driver.findElement(By.xpath("//select"))
-      await dropdown.findElement(By.css("*:nth-child(2)")).click()
+      await dropdown.findElement(By.css("*[value='Organization']")).click()
     }
     await driver.findElement(By.xpath("//td[3]/div/div/div[2]/div/input")).click()
     await driver.findElement(By.xpath("//li[9]/span")).click()
-    await driver.sleep(xpath=//td[3]/div/div/div[2]/div/input)
     await driver.findElement(By.xpath("//lightning-input-field/lightning-input/div/input")).sendKeys("Selenium")
     await driver.findElement(By.xpath("//div[3]/button[2]")).click()
-    await driver.sleep(undefined)
+    await driver.sleep(5000)
     {
       const elements = await driver.findElements(By.xpath("//lightning-input-field/lightning-input/div/input"))
       assert(!elements.length)
