@@ -19,8 +19,9 @@ describe('New Organization', function() {
     await driver.findElement(By.xpath("//select")).click()
     {
       const dropdown = await driver.findElement(By.xpath("//select"))
-      await dropdown.findElement(By.css("*[value='Organization']")).click()
+      await dropdown.findElement(By.css("*[label='Organisation']")).click()
     }
+    await driver.sleep(4000)
     await driver.findElement(By.xpath("//td[3]/div/div/div[2]/div/input")).click()
     await driver.findElement(By.xpath("//li[9]/span")).click()
     await driver.findElement(By.xpath("//lightning-input-field/lightning-input/div/input")).sendKeys("Selenium")
