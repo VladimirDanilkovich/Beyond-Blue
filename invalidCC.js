@@ -18,6 +18,7 @@ describe('Invalid CC', function() {
     await driver.sleep(3000)
     await driver.findElement(By.xpath("//td[3]/div/div/div[2]/div/input")).click()
     await driver.findElement(By.xpath("//td[3]/div/div/div[2]/div/input")).sendKeys("mr selen")
+    await driver.sleep(3000)
     await driver.findElement(By.css(".slds-lookup__list:nth-child(2) .slds-media")).click()
     await driver.findElement(By.xpath("//td[4]/div/div/div[2]/div/input")).click()
     await driver.findElement(By.xpath("//td[4]/div/div/div[4]/ul/li/span/div/span")).click()
@@ -28,7 +29,7 @@ describe('Invalid CC', function() {
       const dropdown = await driver.findElement(By.xpath("//td[7]/div/div/div/select"))
       await dropdown.findElement(By.css("*[value='Credit Card']")).click()
     }
-    await driver.sleep(2000)
+    await driver.sleep(4000)
     await driver.findElement(By.xpath("//td[2]/lightning-input/div/input")).click()
     await driver.findElement(By.xpath("//td[2]/lightning-input/div/input")).sendKeys("4444444444444444")
     {
