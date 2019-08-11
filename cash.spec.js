@@ -15,6 +15,7 @@ describe('Cash', function() {
   })
   it('Cash', async function() {
     
+    await driver.sleep(8000)
     await driver.get("https://beyondblue--dev.lightning.force.com/lightning/n/Bulk_Donations?0.source=alohaHeader")
     await driver.sleep(3000)
     await driver.findElement(By.xpath("//td[3]/div/div/div[2]/div/input")).click()
