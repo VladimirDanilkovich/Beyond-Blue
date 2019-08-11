@@ -27,7 +27,7 @@ describe('Expired CC (false)', function() {
     await driver.findElement(By.xpath("//td[7]/div/div/div/select")).click()
     {
       const dropdown = await driver.findElement(By.xpath("//td[7]/div/div/div/select"))
-      await dropdown.findElement(By.css("*:nth-child(3)")).click()
+      await dropdown.findElement(By.css("*[value='Credit Card']")).click()
     }
     await driver.findElement(By.xpath("//td[2]/lightning-input/div/input")).click()
     await driver.findElement(By.xpath("//td[2]/lightning-input/div/input")).sendKeys("4444333322221111")
