@@ -15,12 +15,13 @@ describe('New Contact', function() {
   })
   it('New Contact', async function() {
     await driver.get("https://beyondblue--dev.lightning.force.com/lightning/n/Bulk_Donations?0.source=alohaHeader")
+    await driver.sleep(3000)
     await driver.findElement(By.xpath("//td[3]/div/div/div[2]/div/input")).click()
     await driver.findElement(By.css(".slds-lookup__item-action--label")).click()
     await driver.findElement(By.xpath("//div[2]/lightning-input/div/input")).sendKeys("Selenium2")
     await driver.findElement(By.xpath("//div[3]/lightning-input/div/input")).sendKeys("Test2")
     await driver.findElement(By.xpath("//div[3]/button[2]")).click()
-    await driver.sleep(undefined)
+    await driver.sleep(5000)
     {
       const elements = await driver.findElements(By.css(".slds-notify"))
       assert(!elements.length)
