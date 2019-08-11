@@ -18,10 +18,6 @@ describe('Valid CC', function() {
     await driver.findElement(By.xpath("//td[3]/div/div/div[2]/div/input")).click()
     await driver.findElement(By.xpath("//td[3]/div/div/div[2]/div/input")).sendKeys("mr selen")
     await driver.findElement(By.css(".slds-lookup__list:nth-child(2) .slds-media")).click()
-    {
-      const element = await driver.findElement(By.css("td:nth-child(3) .slds-button .slds-icon"))
-      await driver.actions({ bridge: true }).moveToElement(element).perform()
-    }
     await driver.findElement(By.xpath("//td[4]/div/div/div[2]/div/input")).click()
     await driver.findElement(By.xpath("//td[4]/div/div/div[4]/ul/li/span/div/span")).click()
     await driver.findElement(By.xpath("//lightning-input/div/input")).click()
@@ -29,7 +25,7 @@ describe('Valid CC', function() {
     await driver.findElement(By.xpath("//td[7]/div/div/div/select")).click()
     {
       const dropdown = await driver.findElement(By.xpath("//td[7]/div/div/div/select"))
-      await dropdown.findElement(By.css("*:nth-child(3)")).click()
+      await dropdown.findElement(By.css("*[value='Credit Card']")).click()
     }
     await driver.findElement(By.xpath("//td[2]/lightning-input/div/input")).click()
     await driver.findElement(By.xpath("//td[2]/lightning-input/div/input")).sendKeys("4444333322221111")
