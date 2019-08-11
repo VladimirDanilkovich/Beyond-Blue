@@ -2,7 +2,7 @@
 const { Builder, By, Key, until } = require('selenium-webdriver')
 const assert = require('assert')
 
-describe('Expired CC (false)', function() {
+describe('Expired CC', function() {
   this.timeout(30000)
   let driver
   let vars
