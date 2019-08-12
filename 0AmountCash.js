@@ -15,7 +15,7 @@ describe('0 Amount Cash', function() {
   })
   it('0 Amount Cash (false)', async function() {
     await driver.get("https://beyondblue--dev.lightning.force.com/lightning/n/Bulk_Donations?0.source=alohaHeader")
-    await driver.sleep(3000)
+    await driver.sleep(7000)
     await driver.findElement(By.xpath("//td[3]/div/div/div[2]/div/input")).click()
     await driver.findElement(By.xpath("//td[3]/div/div/div[2]/div/input")).sendKeys("mr selen")
     await driver.sleep(3000)
@@ -31,6 +31,6 @@ describe('0 Amount Cash', function() {
     }
     await driver.findElement(By.css(".slds-button_brand")).click()
     await driver.findElement(By.xpath("//button[contains(.,\'Save\')]")).click()
-    await driver.wait(until.elementLocated(By.css(".slds-theme--error")), 15000)
+    await driver.wait(until.elementLocated(By.css(".slds-theme--error")), 20000)
   })
 })
